@@ -8,7 +8,7 @@ A Small REST API created with PHP and MySQL as a part of an assignment for the "
   Clone the REPO and use the SQL File to start a database, i used MAMP.
   Add the project to your htdocs folder.
 - [Usage](#usage)
-  The project can be viewed from a browser but to make a POST/PUT you need use something like postman with these links.
+  The project can be viewed from a browser but to make a POST/PUT you need use something like postman with these links unless you build a frontend application to display the information. 
 
   ### GET
 
