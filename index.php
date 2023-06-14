@@ -1,6 +1,12 @@
 <?php
 
 require_once 'config/config.php';
+require_once 'models/ItemModel.php';
+require_once 'controller/ItemController.php';
+require_once 'models/SellerModel.php';
+require_once 'controller/SellerController.php';
+require_once 'view/ItemView.php';
+require_once 'view/SellerView.php';
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -10,12 +16,7 @@ $request = rtrim($_SERVER['REQUEST_URI'], '/');
 $baseUrl = '/roundabout';
 $endpoint = str_replace($baseUrl, '', $request);
 
-require_once 'models/ItemModel.php';
-require_once 'controller/ItemController.php';
-require_once 'models/SellerModel.php';
-require_once 'controller/SellerController.php';
-require_once 'view/ItemView.php';
-require_once 'view/SellerView.php';
+
 
 $Itemmodel = new ItemModel($conn);
 $Itemview = new ItemView();
@@ -24,6 +25,7 @@ $Itemcontroller = new ItemController($Itemmodel, $Itemview);
 $sellerModel = new SellerModel($conn);
 $sellerView = new SellerView();
 $sellerController = new SellerController($sellerModel, $sellerView);
+
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if ($endpoint === '/items') {
         $Itemcontroller->getAllItems();
