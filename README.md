@@ -2,7 +2,7 @@
 
 A Small REST API created with PHP and MySQL as a part of an assignment for the "Systemutveckling PHP" Course.
 
-## Table of Contents
+## Content
 
 - [Installation](#installation)
   Clone the REPO and use the SQL File to start a database, i used MAMP.
@@ -13,8 +13,10 @@ A Small REST API created with PHP and MySQL as a part of an assignment for the "
   ### GET
 
   http://localhost/roundabout/sellers/ - Display a list of all Sellers
+
   http://localhost/roundabout/sellers/{id} - Display a single seller, swap {id} for a number. This will also display all the items that belong to that seller.
   http://localhost/roundabout/items/ - Display a list of all items.
+
   http://localhost/roundabout/items/{id} - Display a single item, swap {id} for a number
 
   ### PUT
