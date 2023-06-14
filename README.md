@@ -27,6 +27,7 @@ A Small REST API created with PHP and MySQL as a part of an assignment for the "
   ### POST
 
   http://localhost/roundabout/sellers/ - Create a new seller using template:
+
   {
   "name":string,
   "total_items_submitted":number,
@@ -35,6 +36,7 @@ A Small REST API created with PHP and MySQL as a part of an assignment for the "
   }
 
   http://localhost/roundabout/items/ - Add a New Item using template:
+
   {
   "name":string,
   "seller_id": number,
