@@ -25,8 +25,8 @@ class SellerController {
                     "item_name" => $item["item_name"],
                     "submitted_date" => $item["submitted_date"],
                     "sold" => $item["sold"],
-                    "price" => $item["price"], // Add the "price" property
-                    "sold_date" => $item["sold_date"] // Add the "sold_date" property
+                    "price" => $item["price"],
+                    "sold_date" => $item["sold_date"]
                 );
                 $items[] = $itemData;
             }
@@ -40,10 +40,8 @@ class SellerController {
                 "items" => $items
             );
             
-            // Set the headers to indicate JSON response
             header('Content-Type: application/json');
             
-            // Echo the JSON response
             echo json_encode($sellerData);
             exit();
         }
