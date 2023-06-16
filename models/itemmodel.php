@@ -1,12 +1,12 @@
 <?php
-// itemmodel.php
+include_once 'arvmodel.php';
 
-class ItemModel {
-    private $conn;
+class ItemModel extends ArvModel {
+    // private $conn;
 
-    public function __construct($conn) {
-        $this->conn = $conn;
-    }
+    // public function __construct($conn) {
+    //     $this->conn = $conn;
+    // }
 
     public function getAllItems() {
         $stmt = $this->conn->query("SELECT * FROM items");

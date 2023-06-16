@@ -1,12 +1,13 @@
 <?php
-// SellerModel.php
 
-class SellerModel {
-    private $conn;
+include_once 'arvmodel.php';
 
-    public function __construct($conn) {
-        $this->conn = $conn;
-    }
+class SellerModel extends ArvModel {
+    // private $conn;
+
+    // public function __construct($conn) {
+    //     $this->conn = $conn;
+    // }
 
     public function getAllSellers() {
         $stmt = $this->conn->query("SELECT * FROM sellers ORDER BY name");
